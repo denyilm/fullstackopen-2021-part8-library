@@ -75,7 +75,8 @@ const Authors = (props) => {
         </div>
         <button type='submit'>update author</button> */}
         <div>
-          name <select value={author} onChange={({ target }) => setAuthor(target.value)}>
+          name <select value={author} onChange={({ target }) => setAuthor(target.value)} onSelect={({ target }) => setAuthor(target.value)}>
+            <option ></option>
             {
               authors.map(a => 
                 <option value={a.name} key={a.name}>{a.name}</option>
